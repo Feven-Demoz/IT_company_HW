@@ -1,3 +1,5 @@
+package genericLinkedList;
+
 import interfaces.IPrintInfo;
 import java.util.List;
 //import jdk.internal.jimage.ImageReader;
@@ -141,6 +143,7 @@ public abstract class LicenseLinkedList<T> implements List<T>, IPrintInfo {
         }
         return true;
     }
+
     @Override
     public boolean addAll(int index, Collection<? extends T> c) {
         if (index < 0 || index > size) {
@@ -154,7 +157,7 @@ public abstract class LicenseLinkedList<T> implements List<T>, IPrintInfo {
 
         return !c.isEmpty();
     }
-
+    //public abstract void listOfInformation();
     @Override
     public void printInformation() {
 

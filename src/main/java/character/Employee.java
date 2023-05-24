@@ -4,6 +4,7 @@ import enums.ContractType;
 import enums.ExperienceLevel;
 import enums.Gender;
 import exception.InvalidEmployeeId;
+import exception.InvalidYearsOfExperience;
 import interfaces.IPrintInfo;
 import interfaces.IWork;
 import java.util.Objects;
@@ -17,18 +18,25 @@ public class Employee extends Person implements IWork, IPrintInfo {
     protected ExperienceLevel experienceLevel;
     protected static int numberOfEmployee = 0;
 
-    public Employee(String fistNameEnter, String lastNameEnter, int employeeIdEnter, Gender gender, Department department, ContractType contractType, ExperienceLevel experienceLevel) throws InvalidEmployeeId {
+    public Employee(String fistNameEnter, String lastNameEnter, int employeeIdEnter, Gender gender, Department department, ContractType contractType, ExperienceLevel experienceLevel) {
         super(fistNameEnter, lastNameEnter, gender);
         //setEmployeeId(employeeId);
-         if (employeeIdEnter == 0) {
-          throw new InvalidEmployeeId("All employees must have ID number");
-         }
+         //if (employeeIdEnter == 0) {
+          //throw new InvalidEmployeeId("All employees must have ID number");
+        // }
         this.employeeId = employeeIdEnter;
         this.department = department;
         this.gender = gender;
         this.contractType = contractType;
         this.experienceLevel = experienceLevel;
         numberOfEmployee++;
+    }
+    public void controlEmployee() throws InvalidEmployeeId{
+        if (employeeId != 0) {
+            System.out.println("Employee ID is correct");
+        }else {
+            throw new InvalidEmployeeId("All employees must have ID number");
+        }
     }
 
 

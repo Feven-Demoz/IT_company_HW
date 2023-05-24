@@ -2,9 +2,11 @@ import enums.DepartmentList;
 import interfaces.IPrintInfo;
 import departments.Department;
 import java.util.ArrayList;
-//import
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.LogManager;
 public final class ItCompany implements IPrintInfo {
+   // logger log = logger.getlogger(ItCompany.class);
     private static String companyName;
     private static String address;
   // private enums.DepartmentList departmentList;
@@ -32,7 +34,7 @@ public final class ItCompany implements IPrintInfo {
         companyName = "AIN Technologies ";
         address = " 24th street N, Alexander MD";
         System.out.println( companyName + " Address " + address);
-       // System.out.println("AIN Technologies Department List ");
+     // logger.info( companyName + " Address " + address);
 
     }
 

@@ -18,14 +18,6 @@ public class   QualityAssurance extends Employee implements ITest {
         this.projects = projects;
     }
 
-
-    /* public QualityAssurance(String fistNameEnter, String lastNameEnter, int employeeIdEnter, Gender gender, Department department, boolean isManual, Project projects) throws InvalidEmployeeId {
-        super(fistNameEnter, lastNameEnter, employeeIdEnter,gender, department);
-        this.isManual = isManual;
-        this.projects = projects;
-    }*/
-
-
     public boolean isManual() {
         return isManual;
     }

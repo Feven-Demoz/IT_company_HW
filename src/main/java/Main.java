@@ -1,3 +1,4 @@
+import character.Employee;
 import departments.Department;
 import departments.HumanResourceDepartment;
 import departments.FinanceDepartment;
@@ -11,9 +12,8 @@ import enums.*;
 import exception.*;
 import projects.Project;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
 //import org.apache.commons.lang3.StringUtils;
@@ -21,7 +21,7 @@ import org.apache.log4j.LogManager;
 //import org.apache.logging.log4j.LogManager;
 
 import fileReaderFolder.FileReader;
-
+import genericLinkedList.LicenseLinkedList;
 
 
 public class Main {
@@ -33,7 +33,7 @@ public class Main {
 
         ItCompany itObject = new ItCompany("AIN Technologies", "24th street N, Alexander MD");
 
-         //itObject.printInformation();
+        //itObject.printInformation();
 
         try {
             List<Department> departmentList = Arrays.asList(new Department("Sales Department", 9087),
@@ -75,40 +75,37 @@ public class Main {
 
             System.out.println();
         } catch (ProjectException e) {
-           // System.out.println("Error" + e.getMessage());
+            // System.out.println("Error" + e.getMessage());
             logger.error("Error" + e.getMessage());
-        }/*
+        }
 
+        List<Employee> employeeList = new ArrayList();
+        Employee emp = new Employee("Sam", "Smith", 987, Gender.MALE, new Department("Marketing Department", 768), ContractType.FULL_TIME, ExperienceLevel.ADVANCED);
+        Employee emp2 = new Employee("Mary", "Williams", 100, Gender.FEMALE, new Department("sales Department", 543), ContractType.CONTRACTOR, ExperienceLevel.INTERMEDIATE);
+        employeeList.add(emp);
+        employeeList.add(emp2);
         try {
-            List<Employee> employeeList = new ArrayList();
-            employeeList.add(new Employee("Sam", "Smith", 0, Gender.MALE, new Department("Marketing Department", 768), ContractType.FULL_TIME, ExperienceLevel.ADVANCED));
-            employeeList.add(new Employee("Mary", "Williams", 100,Gender.FEMALE ,new Department("sales Department", 543),ContractType.CONTRACTOR,ExperienceLevel.INTERMEDIATE));
-            employeeList.add(new Employee("Jane", "Brown", 349,Gender.OTHER, new Department("Finance Department", 432),ContractType.PART_TIME,ExperienceLevel.ENTRY));
-
-            for (Employee empObject : employeeList) {
-                System.out.println(empObject);
-            }
+            emp.controlEmployee();
         } catch (InvalidEmployeeId e) {
-            System.out.println("Error" + e.getMessage());
-
-        } System.out.println("Number of employees = " + Employee.getNumberOfEmployee());
-
-        // String inputGender = "Male";
-       // try {
-          //  Gender genderObject = Gender.fromString(inputGender);
-          // System.out.println("gender " + genderObject.getGender());
-       // } catch (IllegalArgumentException e) {
-          //  System.out.println("Error:" + e.getMessage());
-       // }
-       // System.out.println();*/
+            logger.error("Error" + e.getMessage());
+        }
+        try {
+            emp2.controlEmployee();
+        } catch (InvalidEmployeeId e) {
+            logger.error("Error" + e.getMessage());
+        }
+        for (Employee empObject : employeeList) {
+            logger.info(empObject);
+        }
+        logger.info("Number of employees = " + Employee.getNumberOfEmployee());
+        System.out.println();
 
         List<Manager> managerList = new ArrayList();
-        Manager testing = new Manager("Sam", "Jon", 980, Gender.MALE, new Department("Finance Department", 546), ContractType.FULL_TIME, ExperienceLevel.ADVANCED, "Finance Manager", 4);
+        Manager testing = new Manager("Sam", "Jon", 980, Gender.MALE, new Department("Finance Department", 546), ContractType.FULL_TIME, ExperienceLevel.ADVANCED, "Finance Manager", 7);
         Manager testing2 = new Manager("Tom", "White", 928, Gender.MALE, new Department("Marketing", 321), ContractType.FULL_TIME, ExperienceLevel.ADVANCED, "Head of Marketing", 6);
 
         managerList.add(testing);
         managerList.add(testing2);
-
 
         try {
 
@@ -119,17 +116,14 @@ public class Main {
         }
         try {
             testing2.controlManger();
-
         } catch (InvalidYearsOfExperience e) {
             logger.error("Error" + e.getMessage());
         }
-
         for (Manager mangerObject : managerList) {
-                System.out.println(mangerObject);
-            }
+            logger.info(mangerObject);
+        }
         System.out.println("Number of manages =" + Manager.getNumberOfManagers());
         System.out.println();
-
 
 
         HumanResourceDepartment hrObject = new HumanResourceDepartment("HR", 749, "278765");
@@ -144,7 +138,7 @@ public class Main {
 
             hrObject.setSocialSecurity("123456");
             hrObject.setSocialSecurity("876543");
-            hrObject.setSocialSecurity("987654");
+            hrObject.setSocialSecurity("987659");
             //System.out.println("Social Security Number is correctly provided.");
             logger.error("Social Security Number is correctly provided.");
         } catch (SocialSecurityLengthException e) {
@@ -159,10 +153,10 @@ public class Main {
 
         EngineeringDepartment engineerObject = new EngineeringDepartment("Engineering Department", 987, equipmentList);
         //System.out.println(engineerObject.toString());
-         logger.info(engineerObject.toString());
+        logger.info(engineerObject.toString());
         FinanceDepartment financeObject = new FinanceDepartment("Finance Department", 123, 20000);
         //System.out.println(financeObject.toString());
-         logger.info(financeObject.toString());
+        logger.info(financeObject.toString());
 
         Client<String> listClientsNames = new Client<>();
         listClientsNames.add("Ben");
@@ -176,6 +170,7 @@ public class Main {
         listClientsID.add(9530);
         listClientsID.printList();
 
+
         System.out.println();
         logger.info("AIN Technologies Department List ");
         for (DepartmentList depListObject : DepartmentList.values()) {
@@ -185,14 +180,9 @@ public class Main {
         fileRer.countUniqueWords("src/main/resources/uniqueWordCount.txt");
 
 
+           // LicenseLinkedList<Integer> licenseList = new LicenseLinkedList<>();
         }
-}
-/*
-    String inputFile = "src/main/resources/text.txt";
-    testing
-    String outputFile = "src/main/resources/uniqueWordCount.txt";
+    }
 
-        FileReaderFolder.FileReader.countUniqueWords(inputFile, outputFile);
-}*/
 
-        //logger.error("Error ");
+

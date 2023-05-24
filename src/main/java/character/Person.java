@@ -13,11 +13,6 @@ public abstract class Person{
         this.lastName = lastName;
         this.gender = gender;
     }
-/*
-    public Person(String firstNameEnter, String lastNameEnter) {
-        this.firstName = firstNameEnter;
-        this.lastName = lastNameEnter;
-    }*/
 
     public String getFirstName() {
         return firstName;

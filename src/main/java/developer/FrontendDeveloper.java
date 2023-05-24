@@ -18,12 +18,6 @@ public class FrontendDeveloper extends Employee implements ICode {
         this.projects = projects;
     }
 
-    /* public FrontendDeveloper(String fistNameEnter, String lastNameEnter, int employeeIdEnter, Gender gender, Department department, String framework, Project projects) throws InvalidEmployeeId {
-        super(fistNameEnter, lastNameEnter, employeeIdEnter,gender, department);
-        this.framework = framework;
-        this.projects = projects;
-    }*/
-
     public String getFramework() {
         return framework;
     }

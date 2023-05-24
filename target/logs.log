@@ -75,3 +75,122 @@
 2023-05-23 23:18:51 INFO  Main:180 - Human Resources
 2023-05-23 23:18:51 INFO  Main:180 - Cyber Security
 2023-05-23 23:18:51 INFO  Main:180 - Technical Support
+2023-05-24 09:01:15 ERROR Main:118 - Error Employee need 5 or more years experience to be manager
+2023-05-24 09:01:16 INFO  Main:142 - HumanResource Department {2 positions open }
+2023-05-24 09:01:16 ERROR Main:149 - Social Security Number is correctly provided.
+2023-05-24 09:01:16 INFO  Main:162 - Engineering Department {equipment needed ='[3D Printer, Power Supply]}
+2023-05-24 09:01:16 INFO  Main:165 - FinanceDepartment{budget Set for coming year='20000.0'}
+2023-05-24 09:01:16 INFO  Main:180 - AIN Technologies Department List 
+2023-05-24 09:01:16 INFO  Main:182 - Engineering
+2023-05-24 09:01:16 INFO  Main:182 - Software Development
+2023-05-24 09:01:16 INFO  Main:182 - Quality Assurance
+2023-05-24 09:01:16 INFO  Main:182 - Data Science
+2023-05-24 09:01:16 INFO  Main:182 - Business Intelligence
+2023-05-24 09:01:16 INFO  Main:182 - Finance
+2023-05-24 09:01:16 INFO  Main:182 - Sales
+2023-05-24 09:01:16 INFO  Main:182 - Human Resources
+2023-05-24 09:01:16 INFO  Main:182 - Cyber Security
+2023-05-24 09:01:16 INFO  Main:182 - Technical Support
+2023-05-24 09:49:46 ERROR Main:91 - ErrorAll employees must have ID number
+2023-05-24 09:49:46 INFO  Main:99 - Employee list{Full Name='Sam Smith', Gender='MALE, employeeId=0, Department{departmentName='Marketing Department', departmentId=768}', contractType=FULL_TIME, experienceLevel=ADVANCED}
+2023-05-24 09:49:46 INFO  Main:99 - Employee list{Full Name='Mary Williams', Gender='FEMALE, employeeId=100, Department{departmentName='sales Department', departmentId=543}', contractType=CONTRACTOR, experienceLevel=INTERMEDIATE}
+2023-05-24 09:49:46 INFO  Main:101 - Number of employees = 8
+2023-05-24 09:49:46 ERROR Main:116 - Error Employee need 5 or more years experience to be manager
+2023-05-24 09:49:46 INFO  Main:125 - Manager List{Full Name='Sam Jon', Gender='MALE, employeeId=980, title='Finance Manager', Department{departmentName='Finance Department', departmentId=546}', yearsOfExperience=4}
+2023-05-24 09:49:46 INFO  Main:125 - Manager List{Full Name='Tom White', Gender='MALE, employeeId=928, title='Head of Marketing', Department{departmentName='Marketing', departmentId=321}', yearsOfExperience=6}
+2023-05-24 09:49:46 INFO  Main:139 - HumanResource Department {2 positions open }
+2023-05-24 09:49:46 ERROR Main:146 - Social Security Number is correctly provided.
+2023-05-24 09:49:46 INFO  Main:159 - Engineering Department {equipment needed ='[3D Printer, Power Supply]}
+2023-05-24 09:49:46 INFO  Main:162 - FinanceDepartment{budget Set for coming year='20000.0'}
+2023-05-24 09:49:46 INFO  Main:178 - AIN Technologies Department List 
+2023-05-24 09:49:46 INFO  Main:180 - Engineering
+2023-05-24 09:49:46 INFO  Main:180 - Software Development
+2023-05-24 09:49:46 INFO  Main:180 - Quality Assurance
+2023-05-24 09:49:46 INFO  Main:180 - Data Science
+2023-05-24 09:49:46 INFO  Main:180 - Business Intelligence
+2023-05-24 09:49:46 INFO  Main:180 - Finance
+2023-05-24 09:49:46 INFO  Main:180 - Sales
+2023-05-24 09:49:46 INFO  Main:180 - Human Resources
+2023-05-24 09:49:46 INFO  Main:180 - Cyber Security
+2023-05-24 09:49:46 INFO  Main:180 - Technical Support
+2023-05-24 09:51:01 INFO  Main:99 - Employee list{Full Name='Sam Smith', Gender='MALE, employeeId=987, Department{departmentName='Marketing Department', departmentId=768}', contractType=FULL_TIME, experienceLevel=ADVANCED}
+2023-05-24 09:51:01 INFO  Main:99 - Employee list{Full Name='Mary Williams', Gender='FEMALE, employeeId=100, Department{departmentName='sales Department', departmentId=543}', contractType=CONTRACTOR, experienceLevel=INTERMEDIATE}
+2023-05-24 09:51:01 INFO  Main:101 - Number of employees = 8
+2023-05-24 09:51:01 ERROR Main:116 - Error Employee need 5 or more years experience to be manager
+2023-05-24 09:51:01 INFO  Main:125 - Manager List{Full Name='Sam Jon', Gender='MALE, employeeId=980, title='Finance Manager', Department{departmentName='Finance Department', departmentId=546}', yearsOfExperience=4}
+2023-05-24 09:51:01 INFO  Main:125 - Manager List{Full Name='Tom White', Gender='MALE, employeeId=928, title='Head of Marketing', Department{departmentName='Marketing', departmentId=321}', yearsOfExperience=6}
+2023-05-24 09:51:01 INFO  Main:139 - HumanResource Department {2 positions open }
+2023-05-24 09:51:01 ERROR Main:146 - Social Security Number is correctly provided.
+2023-05-24 09:51:01 INFO  Main:159 - Engineering Department {equipment needed ='[3D Printer, Power Supply]}
+2023-05-24 09:51:01 INFO  Main:162 - FinanceDepartment{budget Set for coming year='20000.0'}
+2023-05-24 09:51:01 INFO  Main:178 - AIN Technologies Department List 
+2023-05-24 09:51:01 INFO  Main:180 - Engineering
+2023-05-24 09:51:01 INFO  Main:180 - Software Development
+2023-05-24 09:51:01 INFO  Main:180 - Quality Assurance
+2023-05-24 09:51:01 INFO  Main:180 - Data Science
+2023-05-24 09:51:01 INFO  Main:180 - Business Intelligence
+2023-05-24 09:51:01 INFO  Main:180 - Finance
+2023-05-24 09:51:01 INFO  Main:180 - Sales
+2023-05-24 09:51:01 INFO  Main:180 - Human Resources
+2023-05-24 09:51:01 INFO  Main:180 - Cyber Security
+2023-05-24 09:51:01 INFO  Main:180 - Technical Support
+2023-05-24 09:54:57 INFO  Main:99 - Employee list{Full Name='Sam Smith', Gender='MALE, employeeId=987, Department{departmentName='Marketing Department', departmentId=768}', contractType=FULL_TIME, experienceLevel=ADVANCED}
+2023-05-24 09:54:57 INFO  Main:99 - Employee list{Full Name='Mary Williams', Gender='FEMALE, employeeId=100, Department{departmentName='sales Department', departmentId=543}', contractType=CONTRACTOR, experienceLevel=INTERMEDIATE}
+2023-05-24 09:54:57 INFO  Main:101 - Number of employees = 8
+2023-05-24 09:54:57 INFO  Main:125 - Manager List{Full Name='Sam Jon', Gender='MALE, employeeId=980, title='Finance Manager', Department{departmentName='Finance Department', departmentId=546}', yearsOfExperience=7}
+2023-05-24 09:54:57 INFO  Main:125 - Manager List{Full Name='Tom White', Gender='MALE, employeeId=928, title='Head of Marketing', Department{departmentName='Marketing', departmentId=321}', yearsOfExperience=6}
+2023-05-24 09:54:57 INFO  Main:139 - HumanResource Department {2 positions open }
+2023-05-24 09:54:57 ERROR Main:149 - ErrorInvalid Social Security, social Security is 6 digit number.
+2023-05-24 09:54:57 INFO  Main:159 - Engineering Department {equipment needed ='[3D Printer, Power Supply]}
+2023-05-24 09:54:57 INFO  Main:162 - FinanceDepartment{budget Set for coming year='20000.0'}
+2023-05-24 09:54:57 INFO  Main:178 - AIN Technologies Department List 
+2023-05-24 09:54:57 INFO  Main:180 - Engineering
+2023-05-24 09:54:57 INFO  Main:180 - Software Development
+2023-05-24 09:54:57 INFO  Main:180 - Quality Assurance
+2023-05-24 09:54:57 INFO  Main:180 - Data Science
+2023-05-24 09:54:57 INFO  Main:180 - Business Intelligence
+2023-05-24 09:54:57 INFO  Main:180 - Finance
+2023-05-24 09:54:57 INFO  Main:180 - Sales
+2023-05-24 09:54:57 INFO  Main:180 - Human Resources
+2023-05-24 09:54:57 INFO  Main:180 - Cyber Security
+2023-05-24 09:54:57 INFO  Main:180 - Technical Support
+2023-05-24 09:55:22 INFO  Main:99 - Employee list{Full Name='Sam Smith', Gender='MALE, employeeId=987, Department{departmentName='Marketing Department', departmentId=768}', contractType=FULL_TIME, experienceLevel=ADVANCED}
+2023-05-24 09:55:22 INFO  Main:99 - Employee list{Full Name='Mary Williams', Gender='FEMALE, employeeId=100, Department{departmentName='sales Department', departmentId=543}', contractType=CONTRACTOR, experienceLevel=INTERMEDIATE}
+2023-05-24 09:55:22 INFO  Main:101 - Number of employees = 8
+2023-05-24 09:55:22 INFO  Main:125 - Manager List{Full Name='Sam Jon', Gender='MALE, employeeId=980, title='Finance Manager', Department{departmentName='Finance Department', departmentId=546}', yearsOfExperience=7}
+2023-05-24 09:55:22 INFO  Main:125 - Manager List{Full Name='Tom White', Gender='MALE, employeeId=928, title='Head of Marketing', Department{departmentName='Marketing', departmentId=321}', yearsOfExperience=6}
+2023-05-24 09:55:22 INFO  Main:139 - HumanResource Department {2 positions open }
+2023-05-24 09:55:22 ERROR Main:146 - Social Security Number is correctly provided.
+2023-05-24 09:55:22 INFO  Main:159 - Engineering Department {equipment needed ='[3D Printer, Power Supply]}
+2023-05-24 09:55:22 INFO  Main:162 - FinanceDepartment{budget Set for coming year='20000.0'}
+2023-05-24 09:55:22 INFO  Main:178 - AIN Technologies Department List 
+2023-05-24 09:55:22 INFO  Main:180 - Engineering
+2023-05-24 09:55:22 INFO  Main:180 - Software Development
+2023-05-24 09:55:22 INFO  Main:180 - Quality Assurance
+2023-05-24 09:55:22 INFO  Main:180 - Data Science
+2023-05-24 09:55:22 INFO  Main:180 - Business Intelligence
+2023-05-24 09:55:22 INFO  Main:180 - Finance
+2023-05-24 09:55:22 INFO  Main:180 - Sales
+2023-05-24 09:55:22 INFO  Main:180 - Human Resources
+2023-05-24 09:55:22 INFO  Main:180 - Cyber Security
+2023-05-24 09:55:22 INFO  Main:180 - Technical Support
+2023-05-24 10:50:07 INFO  Main:98 - Employee list{Full Name='Sam Smith', Gender='MALE, employeeId=987, Department{departmentName='Marketing Department', departmentId=768}', contractType=FULL_TIME, experienceLevel=ADVANCED}
+2023-05-24 10:50:07 INFO  Main:98 - Employee list{Full Name='Mary Williams', Gender='FEMALE, employeeId=100, Department{departmentName='sales Department', departmentId=543}', contractType=CONTRACTOR, experienceLevel=INTERMEDIATE}
+2023-05-24 10:50:07 INFO  Main:100 - Number of employees = 8
+2023-05-24 10:50:07 INFO  Main:123 - Manager List{Full Name='Sam Jon', Gender='MALE, employeeId=980, title='Finance Manager', Department{departmentName='Finance Department', departmentId=546}', yearsOfExperience=7}
+2023-05-24 10:50:07 INFO  Main:123 - Manager List{Full Name='Tom White', Gender='MALE, employeeId=928, title='Head of Marketing', Department{departmentName='Marketing', departmentId=321}', yearsOfExperience=6}
+2023-05-24 10:50:07 INFO  Main:136 - HumanResource Department {2 positions open }
+2023-05-24 10:50:07 ERROR Main:143 - Social Security Number is correctly provided.
+2023-05-24 10:50:07 INFO  Main:156 - Engineering Department {equipment needed ='[3D Printer, Power Supply]}
+2023-05-24 10:50:07 INFO  Main:159 - FinanceDepartment{budget Set for coming year='20000.0'}
+2023-05-24 10:50:07 INFO  Main:175 - AIN Technologies Department List 
+2023-05-24 10:50:07 INFO  Main:177 - Engineering
+2023-05-24 10:50:07 INFO  Main:177 - Software Development
+2023-05-24 10:50:07 INFO  Main:177 - Quality Assurance
+2023-05-24 10:50:07 INFO  Main:177 - Data Science
+2023-05-24 10:50:07 INFO  Main:177 - Business Intelligence
+2023-05-24 10:50:07 INFO  Main:177 - Finance
+2023-05-24 10:50:07 INFO  Main:177 - Sales
+2023-05-24 10:50:07 INFO  Main:177 - Human Resources
+2023-05-24 10:50:07 INFO  Main:177 - Cyber Security
+2023-05-24 10:50:07 INFO  Main:177 - Technical Support
