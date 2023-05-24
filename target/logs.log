@@ -1,0 +1,77 @@
+2023-05-23 17:47:33 INFO  Main:31 - hi
+2023-05-23 17:47:33 INFO  Main:127 - HumanResource Department {2 positions open }
+2023-05-23 17:53:23 INFO  Main:31 - hi
+2023-05-23 17:53:23 INFO  Main:127 - HumanResource Department {2 positions open }
+2023-05-23 18:18:13 INFO  Main:31 - hi
+2023-05-23 18:18:13 INFO  Main:127 - HumanResource Department {2 positions open }
+2023-05-23 18:20:16 INFO  Main:31 - hi
+2023-05-23 18:20:16 INFO  Main:127 - HumanResource Department {2 positions open }
+2023-05-23 18:21:48 INFO  Main:31 - hi
+2023-05-23 18:21:48 INFO  Main:127 - HumanResource Department {2 positions open }
+2023-05-23 18:22:21 INFO  Main:31 - hi
+2023-05-23 18:22:21 INFO  Main:127 - HumanResource Department {2 positions open }
+2023-05-23 18:22:50 INFO  Main:31 - hi
+2023-05-23 18:22:50 INFO  Main:127 - HumanResource Department {2 positions open }
+2023-05-23 20:11:29 INFO  Main:31 - hi
+2023-05-23 20:11:29 INFO  Main:131 - HumanResource Department {2 positions open }
+2023-05-23 20:19:28 INFO  Main:31 - hi
+2023-05-23 20:19:28 INFO  Main:148 - HumanResource Department {2 positions open }
+2023-05-23 20:20:42 INFO  Main:31 - hi
+2023-05-23 20:20:42 INFO  Main:148 - HumanResource Department {2 positions open }
+2023-05-23 22:42:19 INFO  Main:31 - hi
+2023-05-23 22:42:19 INFO  Main:148 - HumanResource Department {2 positions open }
+2023-05-23 22:42:56 INFO  Main:147 - HumanResource Department {2 positions open }
+2023-05-23 22:46:06 ERROR Main:123 - Errorgo back to school
+2023-05-23 22:46:06 INFO  Main:147 - HumanResource Department {2 positions open }
+2023-05-23 22:46:06 INFO  Main:184 - AIN Technologies Department List 
+2023-05-23 22:46:06 INFO  Main:186 - Engineering
+2023-05-23 22:46:06 INFO  Main:186 - Software Development
+2023-05-23 22:46:06 INFO  Main:186 - Quality Assurance
+2023-05-23 22:46:06 INFO  Main:186 - Data Science
+2023-05-23 22:46:06 INFO  Main:186 - Business Intelligence
+2023-05-23 22:46:06 INFO  Main:186 - Finance
+2023-05-23 22:46:06 INFO  Main:186 - Sales
+2023-05-23 22:46:06 INFO  Main:186 - Human Resources
+2023-05-23 22:46:06 INFO  Main:186 - Cyber Security
+2023-05-23 22:46:06 INFO  Main:186 - Technical Support
+2023-05-23 22:51:42 INFO  Main:147 - HumanResource Department {2 positions open }
+2023-05-23 22:51:42 INFO  Main:184 - AIN Technologies Department List 
+2023-05-23 22:51:42 INFO  Main:186 - Engineering
+2023-05-23 22:51:42 INFO  Main:186 - Software Development
+2023-05-23 22:51:42 INFO  Main:186 - Quality Assurance
+2023-05-23 22:51:42 INFO  Main:186 - Data Science
+2023-05-23 22:51:42 INFO  Main:186 - Business Intelligence
+2023-05-23 22:51:42 INFO  Main:186 - Finance
+2023-05-23 22:51:42 INFO  Main:186 - Sales
+2023-05-23 22:51:42 INFO  Main:186 - Human Resources
+2023-05-23 22:51:42 INFO  Main:186 - Cyber Security
+2023-05-23 22:51:42 INFO  Main:186 - Technical Support
+2023-05-23 22:52:28 ERROR Main:123 - Error Employee need 5 or more years experience to be manager
+2023-05-23 22:52:28 INFO  Main:147 - HumanResource Department {2 positions open }
+2023-05-23 22:52:28 INFO  Main:184 - AIN Technologies Department List 
+2023-05-23 22:52:28 INFO  Main:186 - Engineering
+2023-05-23 22:52:28 INFO  Main:186 - Software Development
+2023-05-23 22:52:28 INFO  Main:186 - Quality Assurance
+2023-05-23 22:52:28 INFO  Main:186 - Data Science
+2023-05-23 22:52:28 INFO  Main:186 - Business Intelligence
+2023-05-23 22:52:28 INFO  Main:186 - Finance
+2023-05-23 22:52:28 INFO  Main:186 - Sales
+2023-05-23 22:52:28 INFO  Main:186 - Human Resources
+2023-05-23 22:52:28 INFO  Main:186 - Cyber Security
+2023-05-23 22:52:28 INFO  Main:186 - Technical Support
+2023-05-23 23:18:51 ERROR Main:116 - Error Employee need 5 or more years experience to be manager
+2023-05-23 23:18:51 INFO  Main:140 - HumanResource Department {2 positions open }
+2023-05-23 23:18:51 ERROR Main:147 - Social Security Number is correctly provided.
+2023-05-23 23:18:51 INFO  Main:160 - Engineering Department {equipment needed ='[3D Printer, Power Supply]}
+2023-05-23 23:18:51 INFO  Main:163 - FinanceDepartment{budget Set for coming year='20000.0'}
+2023-05-23 23:18:51 INFO  Main:178 - AIN Technologies Department List 
+2023-05-23 23:18:51 INFO  Main:180 - Engineering
+2023-05-23 23:18:51 INFO  Main:180 - Software Development
+2023-05-23 23:18:51 INFO  Main:180 - Quality Assurance
+2023-05-23 23:18:51 INFO  Main:180 - Data Science
+2023-05-23 23:18:51 INFO  Main:180 - Business Intelligence
+2023-05-23 23:18:51 INFO  Main:180 - Finance
+2023-05-23 23:18:51 INFO  Main:180 - Sales
+2023-05-23 23:18:51 INFO  Main:180 - Human Resources
+2023-05-23 23:18:51 INFO  Main:180 - Cyber Security
+2023-05-23 23:18:51 INFO  Main:180 - Technical Support
