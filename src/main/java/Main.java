@@ -189,6 +189,7 @@ public class Main {
 }
 /*
     String inputFile = "src/main/resources/text.txt";
+    testing
     String outputFile = "src/main/resources/uniqueWordCount.txt";
 
         FileReaderFolder.FileReader.countUniqueWords(inputFile, outputFile);
