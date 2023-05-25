@@ -50,6 +50,10 @@ public class HumanResourceDepartment extends Department implements IPrintInfo {
         this.socialSecurity = socialSecurity;
     }
 
+    public String getSocialSecurity() {
+        return socialSecurity;
+    }
+
     @Override
     public String toString() {
         return "HumanResourceDepartment{" + getEmployeesList() +

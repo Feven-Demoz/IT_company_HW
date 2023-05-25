@@ -10,6 +10,7 @@ public class  FinanceDepartment extends Department implements IPrintInfo {
        super(departmentName, departmentId);
         this.budget = budget;
     }
+
     public double getBudget() {
 
         return budget;
