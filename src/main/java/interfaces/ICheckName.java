@@ -1,5 +1,5 @@
 package interfaces;
 
-public interface ICheckName {
-    boolean validName(String name);
+public interface ICheckName <T>{
+    boolean validName(T value);
 }

@@ -15,7 +15,10 @@ import interfaces.ICheckSSN;
 import projects.Project;
 
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -38,11 +41,15 @@ public class Main {
 
         ItCompany itObject = new ItCompany("AIN Technologies", "24th street N, Alexander MD");
 
-        //itObject.printInformation();
+        UnaryOperator<String> capitalize = str -> str.toUpperCase();
+        String capitalizedCompanyName = capitalize.apply(itObject.getCompanyName());
+        logger.info(capitalizedCompanyName);
+        Consumer<String> compAddress = address -> logger.info("Address = " + itObject.getAddress());
+        compAddress.accept(itObject.getAddress());
 
         try {
-            List<Department> departmentList = Arrays.asList(new Department("Sales Department", 9087),
-                    new Department("Marketing Department", 9086));
+            List<Department> departmentList = Arrays.asList(new Department("Sales Department", 987),
+                    new Department("Marketing Department", 986));
             //departmentList.stream().forEach(System.out::println);
 
             for (Department departmentObject : departmentList) {
@@ -51,7 +58,18 @@ public class Main {
         } catch (NullDepartmentException e) {
             //System.out.println("Error" + e.getMessage());
             logger.error("Error" + e.getMessage());
-        }
+             }
+//             try {
+//            Supplier<Department> createDepartment = () -> {
+//                if (departmentNameEnter == null) {
+//                    throw new NullDepartmentException("Department can not be null");
+//                }
+//                return new Department("IT Department");
+//            };
+//            Department department = createDepartment.get();
+//        } catch (NullDepartmentException e) {
+//            e.getMessage();
+//        }
 
         System.out.println();
         try {
@@ -71,6 +89,8 @@ public class Main {
             //System.out.println("Error" + e.getMessage());
             logger.error("Error" + e.getMessage());
         }
+
+
         System.out.println();
         try {
 
@@ -84,7 +104,14 @@ public class Main {
             logger.error("Error" + e.getMessage());
         }
 
-        List<Manager> managerList = new ArrayList();
+
+//        LocalDate givenStartDate = LocalDate.of(2023, 1, 1);
+//        LocalDate givenFinishDate = LocalDate.of(2023, 1, 31);
+//         Predicate<Project> isOnSchedule = project ->
+//                 project.getStartDate().isBefore(giveStartDate) && project.getFinishDate().isAfter(givenFinishDate);
+//        logger.info(isOnSchedule.test(Mobile Testing ));
+
+         List<Manager> managerList = new ArrayList();
         Manager testing = new Manager("Sam", "Jon", 980, Gender.MALE, new Department("Finance Department", 546), ContractType.FULL_TIME, ExperienceLevel.ADVANCED, "Finance Manager", 7);
         Manager testing2 = new Manager("Tom", "White", 928, Gender.MALE, new Department("Marketing Department", 321), ContractType.FULL_TIME, ExperienceLevel.ADVANCED, "Head of Marketing", 6);
 
@@ -110,6 +137,8 @@ public class Main {
         System.out.println();
 
 
+
+
         List<Employee> employeeList = new ArrayList();
         Employee emp = new Employee("Sam", "Smith", 987, Gender.MALE, new Department("Marketing Department", 768), ContractType.FULL_TIME, ExperienceLevel.ADVANCED);
         Employee emp2 = new Employee("Mary", "Williams", 876, Gender.FEMALE, new Department("sales Department", 543), ContractType.CONTRACTOR, ExperienceLevel.INTERMEDIATE);
@@ -130,15 +159,13 @@ public class Main {
         }
         logger.info("Number of employees = " + Employee.getNumberOfEmployee());
         System.out.println();
-////////lambda 1 not printing
 
-     // Stream<Employee> employeeStream = employeeList.stream().filter(employee->employee.getDepartment().equals("sales Department") );
-       // Stream<Employee> employeeStream = employeeList.stream().filter(employee->employee.getFirstName().equals("Sam") );
+
         Stream<Employee> employeeStream = employeeList.stream().filter(employee->employee.getEmployeeId() ==987  );
         employeeStream.forEach(Employee-> logger.info(Employee.getFirstName() + " " + Employee.getLastName()));
-      //  Stream<Employee> employeeStream = employeeList.stream().filter(employee->employee.getGender().equals("MALE") );
-       // employeeStream.forEach(Employee-> System.out.println(Employee.getFirstName()));
 
+     //Supplier<Employee> employeeHired = ()-> new Employee("Ali","Lopez",876,Gender.FEMALE,new Department("Marketing Department",768),ContractType.FULL_TIME,ExperienceLevel.ADVANCED);
+    // Employee newEmployee = employeeHired.get();
 
 
         HumanResourceDepartment hrObject = new HumanResourceDepartment("HR", 749, "278765");
@@ -162,10 +189,11 @@ public class Main {
         }
 
         ICheckSSN ssnString = ssn -> !ssn.matches("\\d+");
-        logger.info(ssnString.validateSSN( hrObject.getSocialSecurity()));
-        //System.out.println("ssn numeric value");
+        logger.info("ssn is numeric value " + ssnString.validateSSN( hrObject.getSocialSecurity()));
 
-
+        ICheckName<String> onlyLetters= name -> name.matches("[a-zA-Z]+");
+       logger.info("Fist and last name is all letters "+  onlyLetters.validName(emp.getFirstName()) + " "+ onlyLetters.validName(emp.getLastName()));
+        System.out.println();
         List<String> equipmentList = new ArrayList<>();
         equipmentList.add("3D Printer");
         equipmentList.add("Power Supply");

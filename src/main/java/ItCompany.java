@@ -33,7 +33,7 @@ public final class ItCompany implements IPrintInfo {
     static {
         companyName = "AIN Technologies ";
         address = " 24th street N, Alexander MD";
-        System.out.println( companyName + " Address " + address);
+        //System.out.println( companyName + " Address " + address);
      // logger.info( companyName + " Address " + address);
 
     }

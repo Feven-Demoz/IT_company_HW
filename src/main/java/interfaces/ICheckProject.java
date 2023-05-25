@@ -1,2 +1,7 @@
-package interfaces;public interface ICheckProject {
+package interfaces;
+
+import projects.Project;
+
+public interface ICheckProject {
+    boolean test(Project project);
 }
