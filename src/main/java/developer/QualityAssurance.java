@@ -7,13 +7,14 @@ import exception.InvalidEmployeeId;
 import interfaces.ITest;
 import character.Employee;
 import projects.Project;
-
+import org.apache.log4j.Logger;
 public class   QualityAssurance extends Employee implements ITest {
+    public static Logger logger = Logger.getLogger(QualityAssurance.class);
     private boolean isManual;
     private Project projects;
 
-    public QualityAssurance(String fistNameEnter, String lastNameEnter, int employeeIdEnter, Gender gender, Department department, ContractType contractType, ExperienceLevel experienceLevel, boolean isManual, Project projects) throws InvalidEmployeeId {
-        super(fistNameEnter, lastNameEnter, employeeIdEnter, gender, department, contractType, experienceLevel);
+    public QualityAssurance(String fistNameEnter, String lastNameEnter,int age, int employeeIdEnter, Gender gender, Department department, ContractType contractType, ExperienceLevel experienceLevel, boolean isManual, Project projects,double salary ) throws InvalidEmployeeId {
+        super(fistNameEnter, lastNameEnter, employeeIdEnter, age, gender, department, contractType, experienceLevel,salary);
         this.isManual = isManual;
         this.projects = projects;
     }

@@ -2,7 +2,8 @@ import enums.DepartmentList;
 import interfaces.IPrintInfo;
 import departments.Department;
 import java.util.ArrayList;
-
+import character.Employee;
+import java.util.List;
 import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
 public final class ItCompany implements IPrintInfo {
@@ -10,7 +11,7 @@ public final class ItCompany implements IPrintInfo {
     private static String companyName;
     private static String address;
   // private enums.DepartmentList departmentList;
-
+  private List<Employee> employees;
     private final ArrayList<Department> DepartmentList = new ArrayList<>();
 
     public ItCompany(String companyNameEnter, String addressEnter) { //ArrayList<Department> departmentListEnter) {
@@ -27,6 +28,7 @@ public final class ItCompany implements IPrintInfo {
     public ArrayList<Department> getDepartmentList() {
         return DepartmentList;
     }
+
 
 
 

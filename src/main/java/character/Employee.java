@@ -7,19 +7,22 @@ import exception.InvalidEmployeeId;
 import exception.InvalidYearsOfExperience;
 import interfaces.IPrintInfo;
 import interfaces.IWork;
+import org.apache.log4j.Logger;
+
 import java.util.Objects;
 import java.util.Scanner;
 
 public class Employee extends Person implements IWork, IPrintInfo {
-
+    public static Logger logger = Logger.getLogger(Employee.class);
     protected  int employeeId;
     protected Department department;
     protected ContractType contractType;
     protected ExperienceLevel experienceLevel;
+    protected double salary;
     protected static int numberOfEmployee = 0;
 
-    public Employee(String fistNameEnter, String lastNameEnter, int employeeIdEnter, Gender gender, Department department, ContractType contractType, ExperienceLevel experienceLevel) {
-        super(fistNameEnter, lastNameEnter, gender);
+    public Employee(String fistNameEnter, String lastNameEnter, int age,int employeeIdEnter, Gender gender, Department department, ContractType contractType, ExperienceLevel experienceLevel,double salary) {
+        super(fistNameEnter, lastNameEnter,age, gender);
         //setEmployeeId(employeeId);
          //if (employeeIdEnter == 0) {
           //throw new InvalidEmployeeId("All employees must have ID number");
@@ -29,11 +32,15 @@ public class Employee extends Person implements IWork, IPrintInfo {
         this.gender = gender;
         this.contractType = contractType;
         this.experienceLevel = experienceLevel;
+        this.salary = salary;
         numberOfEmployee++;
     }
+
+
     public void controlEmployee() throws InvalidEmployeeId{
         if (employeeId != 0) {
-            System.out.println("Employee ID is correct");
+            //System.out.println("Employee ID is correct");
+            logger.info("Employee ID is correct");
         }else {
             throw new InvalidEmployeeId("All employees must have ID number");
         }
@@ -57,6 +64,9 @@ public class Employee extends Person implements IWork, IPrintInfo {
         return numberOfEmployee;
     }
 
+    public double getSalary() {
+        return salary;
+    }
 
     @Override
     public String toString() {

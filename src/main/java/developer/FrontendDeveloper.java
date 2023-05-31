@@ -6,14 +6,16 @@ import enums.Gender;
 import exception.InvalidEmployeeId;
 import interfaces.ICode;
 import character.Employee;
+import org.apache.log4j.Logger;
 import projects.Project;
-
+import org.apache.log4j.Logger;
 public class FrontendDeveloper extends Employee implements ICode {
+    public static Logger logger = Logger.getLogger(FrontendDeveloper.class);
     private String framework;
     private Project projects;
 
-    public FrontendDeveloper(String fistNameEnter, String lastNameEnter, int employeeIdEnter, Gender gender, Department department, ContractType contractType, ExperienceLevel experienceLevel, String framework, Project projects) throws InvalidEmployeeId {
-        super(fistNameEnter, lastNameEnter, employeeIdEnter, gender, department, contractType, experienceLevel);
+    public FrontendDeveloper(String fistNameEnter, String lastNameEnter, int age ,int employeeIdEnter, Gender gender, Department department, ContractType contractType, ExperienceLevel experienceLevel, String framework, Project projects,double salary) throws InvalidEmployeeId {
+        super(fistNameEnter, lastNameEnter, employeeIdEnter, age, gender, department, contractType, experienceLevel, salary);
         this.framework = framework;
         this.projects = projects;
     }

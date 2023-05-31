@@ -4,26 +4,29 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 import java.util.Set;
-import static org.apache.commons.io.FileUtils.writeStringToFile;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.StringUtils;
+import java.nio.file.Files;
+import java.io.IOException;
+import java.util.List;
+import java.nio.file.Paths;
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 
 public class FileReader {
 
-    private int numberOfManagers = 0;
 
     public static void countUniqueWords(String countUniqueWords) {
         String inputFile = "src/main/resources/text.txt";
         String outputFile = "src/main/resources/uniqueWordCount.txt";
 
         try {
-            String content = FileUtils.readFileToString(new File(inputFile), StandardCharsets.UTF_8);
-            String[] words = StringUtils.split(content, "[^a-zA-Z]+");
+            List<String> words = Files.readAllLines(Paths.get(inputFile))
+                    .stream()
+                    .flatMap(line -> Arrays.stream(line.split("[^a-zA-Z]+")))
+                    .collect(Collectors.toList());
 
-            Set<String> uniqueWords = new HashSet<>();
-            for (String word : words) {
-                uniqueWords.add(word.toLowerCase());
-            }
+            Set<String> uniqueWords = new HashSet<>(words);
 
             int uniqueWordCount = uniqueWords.size();
             String result = "The number of unique words is: " + uniqueWordCount;
@@ -34,5 +37,20 @@ public class FileReader {
             e.printStackTrace();
         }
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

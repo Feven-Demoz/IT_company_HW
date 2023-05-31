@@ -5,8 +5,9 @@ import interfaces.IPrintInfo;
 import character.Employee;
 import character.Manager;
 import java.util.ArrayList;
-
+import org.apache.log4j.Logger;
 public class Department implements IPrintInfo  {
+    public static Logger logger = Logger.getLogger(Department.class);
     private final String departmentName;
     private final int departmentId;
 
@@ -15,13 +16,19 @@ public class Department implements IPrintInfo  {
 
     public Department(String departmentNameEnter, int departmentId) throws NullDepartmentException { //,String projectNameEnter, int startDateEnter, int finishDateEnter) {
         //super(projectNameEnter, startDateEnter, finishDateEnter);
-        if (departmentNameEnter == null){
-            throw new NullDepartmentException("Department can not be null.");
-        }
+       // if (departmentNameEnter == null){
+           // throw new NullDepartmentException("Department can not be null.");
+        //}
         this.departmentName = departmentNameEnter;
         this.departmentId = departmentId;
 
     }
+    public void controlDepartment() throws NullDepartmentException {
+        if (departmentName == null || departmentName.isEmpty()) {
+            throw new NullDepartmentException("Department name cannot be null or empty.");
+        }
+    }
+
 
     public String getDepartmentName() {
         return departmentName;

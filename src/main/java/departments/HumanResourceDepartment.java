@@ -5,15 +5,17 @@ import exception.SocialSecurityLengthException;
 import exception.NullDepartmentException;
 import exception.SocialSecurityLengthException;
 import interfaces.IPrintInfo;
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import org.apache.log4j.Logger;
 
 
 public class HumanResourceDepartment extends Department implements IPrintInfo {
-
+    public static Logger logger = Logger.getLogger(HumanResourceDepartment.class);
     protected List<Boolean> positionStatuses;
     protected String socialSecurity;
 

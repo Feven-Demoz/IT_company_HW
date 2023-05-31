@@ -9,27 +9,32 @@ import interfaces.IManage;
 import interfaces.IPrintInfo;
 
 import java.util.Objects;
-
+import org.apache.log4j.Logger;
+import org.apache.log4j.LogManager;
 public class Manager extends Employee implements IManage, IPrintInfo {
+    public static Logger logger = Logger.getLogger(Manager.class);
     private String title;
     private int yearsOfExperience;
 private static int numberOfManagers=0;
 
 
 
-     public Manager(String fistNameEnter, String lastNameEnter, int employeeIdEnter, Gender gender, Department department, ContractType contractType, ExperienceLevel experienceLevel,String titleEnter, int yearsOfExperienceEnter) throws InvalidEmployeeId {
-                super(fistNameEnter, lastNameEnter, employeeIdEnter,gender, department, contractType, experienceLevel);
+     public Manager(String fistNameEnter, String lastNameEnter,int age, int employeeIdEnter, Gender gender, Department department, ContractType contractType, ExperienceLevel experienceLevel,String titleEnter, int yearsOfExperienceEnter,double salary) throws InvalidEmployeeId {
+                super(fistNameEnter, lastNameEnter, employeeIdEnter, age, gender, department, contractType, experienceLevel,salary);
 //            if (yearsOfExperienceEnter <=5 ){
 //                throw new InvalidYearsOfExperience(" Managers must have 5 years or more years of experience");
 //            }
             this.title = titleEnter;
             this.yearsOfExperience = yearsOfExperienceEnter;
-            this.gender=gender;
+            //this.gender=gender;
             numberOfManagers++;
         }
+
+
     public void controlManger() throws InvalidYearsOfExperience {
         if (yearsOfExperience >= 5) {
-            System.out.println("Employee is qualified to be manger");
+            //System.out.println("Employee is qualified to be manger");
+            logger.info("Employee is qualified to be manger");
         } else {
             throw new InvalidYearsOfExperience(" Employee need 5 or more years experience to be manager");
         }
