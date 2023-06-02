@@ -46,7 +46,6 @@ public class Main {
 
     public static void main(String[] args) throws InvalidEmployeeId, NullDepartmentException {
 
-        //System.out.println(Thread.activeCount());
         System.out.println(Thread.currentThread().getName());
 
         ItCompany itObject = new ItCompany("AIN Technologies", "24th street N, Alexander MD");
@@ -57,67 +56,75 @@ public class Main {
         Consumer<String> compAddress = address -> logger.info("Address = " + itObject.getAddress());
         compAddress.accept(itObject.getAddress());
 
-
         List<Department> departmentList = new ArrayList<>();
-          Department department1 =new Department("Sales Department", 987);
-          Department department2 = new Department("Marketing Department", 986);
+        Department department1 = new Department("Sales Department", 987);
+        Department department2 = new Department("Marketing Department", 986);
         departmentList.add(department1);
         departmentList.add(department2);
-        for (Department departmentObject : departmentList) {
-         try {
-             departmentObject.controlDepartment();
-         }catch (NullDepartmentException e) {
-             logger.error("Error:" + e.getMessage());
-            }
-        }
-        for (Department department : departmentList) {
-            logger.info(department);
-        }
-            System.out.println();
 
+        departmentList.stream().forEach(departmentObject -> {
             try {
-                List<BackendDeveloper> backendDeveloperList = Arrays.asList(new BackendDeveloper("Amy", "Lee", 43, 987, Gender.FEMALE,
+                departmentObject.controlDepartment();
+            } catch (NullDepartmentException e) {
+                logger.error("Error: " + e.getMessage());
+            }
+        });
+
+        departmentList.stream().forEach(department -> logger.info(department));
+
+        System.out.println();
+
+                List<BackendDeveloper> backendDeveloperList = Arrays.asList(
+                        new BackendDeveloper("Amy", "Lee", 43, 987, Gender.FEMALE,
                                 new Department("Backend Developer", 665), ContractType.FULL_TIME, ExperienceLevel.ADVANCED,
                                 new Project("Web development", LocalDate.of(2023, 2, 11), LocalDate.of(2023, 3, 29)), ProgramingLanguages.JAVA, 5000),
                         new BackendDeveloper("Mia", "Joy", 30, 867, Gender.FEMALE,
                                 new Department("Backend Developer", 665), ContractType.INTERNSHIP, ExperienceLevel.ENTRY,
                                 new Project("API Development", LocalDate.of(2023, 01, 07), LocalDate.of(2023, 03, 12)), ProgramingLanguages.JAVA, 4500));
 
-              backendDeveloperList.forEach(backendDeveloper -> logger.info(backendDeveloper.toString()));
-
-            } catch (ProjectException e) {
-
-                logger.error("Error" + e.getMessage());
-            }
+              backendDeveloperList.stream().forEach(backendDeveloper -> {
+                  try{
+                      logger.info(backendDeveloper.toString());
+                  }
+                      catch (ProjectException e) {
+                          logger.error("Error" + e.getMessage());
+                      }
+              });
             System.out.println();
+
+        List<FrontendDeveloper> frontendDeveloperList = Arrays.asList(
+                new FrontendDeveloper("Adam", "Cole", 44, 543, Gender.OTHER,
+                        new Department("Frontend Developer", 442), ContractType.FULL_TIME, ExperienceLevel.INTERMEDIATE, "Angular",
+                        new Project("Web Design 1", LocalDate.of(2023, 01, 10), LocalDate.of(2023, 04, 15)), 4000),
+                new FrontendDeveloper("Emma", "Oliver", 29, 987, Gender.FEMALE,
+                        new Department("Frontend Developer", 442), ContractType.FULL_TIME, ExperienceLevel.INTERMEDIATE, "Vue.js",
+                        new Project("Web Design 2", LocalDate.of(2023, 04, 30), LocalDate.of(2023, 06, 05)), 4500)
+        );
+        frontendDeveloperList.stream().forEach(frontendDeveloper -> {
             try {
-                List<FrontendDeveloper> frontendDeveloperList = Arrays.asList(new FrontendDeveloper("Adam", "Cole", 44, 543, Gender.OTHER,
-                                new Department("Frontend Developer", 442), ContractType.FULL_TIME, ExperienceLevel.INTERMEDIATE, "Angular",
-                                new Project("Web Design 1", LocalDate.of(2023, 01, 10), LocalDate.of(2023, 04, 15)), 4000),
-                        new FrontendDeveloper("Emma", "Oliver", 29, 987, Gender.FEMALE, new Department("Frontend Developer", 442), ContractType.FULL_TIME, ExperienceLevel.INTERMEDIATE, "Vue.js",
-                                new Project("Web Design 2", LocalDate.of(2023, 04, 30), LocalDate.of(2023, 06, 05)), 4500));
-
-                frontendDeveloperList.forEach(frontendDeveloper -> logger.info(frontendDeveloper.toString()));
-
+                logger.info(frontendDeveloper.toString());
             } catch (ProjectException e) {
-
-                logger.error("Error" + e.getMessage());
+                logger.error("Error: " + e.getMessage());
             }
+        });
 
             System.out.println();
-            try {
 
-                List<QualityAssurance> qualityAssuranceList = Arrays.asList(new QualityAssurance("Jack", "Oliver", 35, 654, Gender.MALE,
+                List<QualityAssurance> qualityAssuranceList = Arrays.asList(
+                        new QualityAssurance("Jack", "Oliver", 35, 654, Gender.MALE,
                                 new Department("Quality Assurance", 224), ContractType.CONTRACTOR, ExperienceLevel.ADVANCED, false,
                                 new Project("Usability Testing", LocalDate.of(2023, 02, 06), LocalDate.of(2023, 03, 19)), 5000),
                         new QualityAssurance("Daniel", "William", 28, 385, Gender.OTHER,
                                 new Department("Quality Assurance", 224), ContractType.FULL_TIME, ExperienceLevel.INTERMEDIATE, true,
-                                new Project("Mobile Testing ", LocalDate.of(2023, 04, 01), LocalDate.of(2023, 05, 30)), 4500));
-                qualityAssuranceList.forEach(qualityAssurance -> logger.info(qualityAssurance.toString()));
+                                new Project("Mobile Testing ", LocalDate.of(2023, 04, 01), LocalDate.of(2023, 05, 30)), 4500)
+                );
+                qualityAssuranceList.stream().forEach(qualityAssurance -> {
+                    try{logger.info(qualityAssurance.toString());
+                    } catch (ProjectException e) {
+                        logger.error("Error" + e.getMessage());
+                    }
+                });
                 System.out.println();
-            } catch (ProjectException e) {
-                logger.error("Error" + e.getMessage());
-            }
 
 
 
@@ -127,16 +134,14 @@ public class Main {
 
             managerList.add(manager1);
             managerList.add(manager2);
-            for (Manager manager : managerList) {
+            managerList.stream().forEach(manager -> {
                 try {
                     manager.controlManger();
                 } catch (InvalidYearsOfExperience e) {
                     logger.error("Error" + e.getMessage());
                 }
-            }
-            for (Manager mangerObject : managerList) {
-                logger.info(mangerObject);
-            }
+            });
+           managerList.stream().forEach(manager -> logger.info(manager));
 
             logger.info("Number of manages =" + Manager.getNumberOfManagers());
             System.out.println();
@@ -150,18 +155,14 @@ public class Main {
         employeeList.add(employee2);
         employeeList.add(employee3);
 
-        for (Employee employee : employeeList) {
-
+        employeeList.stream().forEach(employee -> {
             try {
                 employee.controlEmployee();
             } catch (InvalidEmployeeId e) {
                 logger.error("Error" + e.getMessage());
             }
-        }
-        for (Employee employee : employeeList) {
-            logger.info(employee);
-        }
-
+        });
+        employeeList.stream().forEach(employee -> logger.info(employee));
 
             logger.info("Number of employees = " + Employee.getNumberOfEmployee());
             System.out.println();
@@ -172,20 +173,19 @@ public class Main {
             }
             System.out.println();
 
-
             Stream<Employee> employeeStream = employeeList.stream().filter(employee -> employee.getEmployeeId() == 987);
             employeeStream.forEach(Employee -> logger.info(Employee.getFirstName() + " " + Employee.getLastName()));
-/////////////// print  female
+        // print  female
             List<Employee> females = employeeList.stream()
                     .filter(employee -> employee.getGender().equals(Gender.FEMALE))
                     .collect(Collectors.toList());
         females.forEach(employee -> logger.info(employee.toString()));
 
-////////////age of employees
+          //age of employees
             boolean allMatch = employeeList.stream().allMatch(employee -> employee.getAge() < 65 && employee.getAge() > 20);
             logger.info("All employees are between 20 to 65 age:" + allMatch);
-////////to print employees by gender
-//
+            //to print employees by gender
+
         Map<Gender, List<Employee>> groupByGender = employeeList.stream()
                 .collect(Collectors.groupingBy(Employee::getGender));
 
@@ -193,13 +193,12 @@ public class Main {
             logger.info(gender.toString());
             employees.forEach(employee -> logger.info(employee.toString()));
         });
-////////max salary of employees
+          //max salary of employees
 
             Optional<String> highestPaidEmployeeName = employeeList.stream()
                     .max(Comparator.comparingDouble(Employee::getSalary))
                     .map(Employee::getFirstName);
             highestPaidEmployeeName.ifPresent(name -> logger.info("Highest paid employee: " + name));
-
 
 
             HumanResourceDepartment hrObject = new HumanResourceDepartment("HR", 749, "278765");
@@ -210,18 +209,17 @@ public class Main {
             int openPositions = hrObject.countOpenPositions();
             logger.info("HumanResource Department {" + openPositions + " positions open }");
 
-            try {
-                hrObject.setSocialSecurity("896543");
-                logger.warn("Social Security Number is correctly provided.");
-            } catch (SocialSecurityLengthException e) {
-                logger.error("Error: " + e.getMessage());
-            }
-            try {
-                hrObject.setSocialSecurity("122496");
-                logger.warn("Social Security Number is correctly provided.");
-            } catch (SocialSecurityLengthException e) {
-                logger.error("Error: " + e.getMessage());
-            }
+
+         List<String>socialSecurityNumber = Arrays.asList("879739","838901");
+         socialSecurityNumber.stream().forEach(snn-> {
+             try {
+                 hrObject.setSocialSecurity(snn);
+                 logger.warn("Social Security Number is correctly provided.");
+             } catch (SocialSecurityLengthException e) {
+                 logger.error("Error: " + e.getMessage());
+             }
+         });
+
             ICheckSSN ssnString = ssn -> !ssn.matches("\\d+");
             logger.info("ssn is numeric value " + ssnString.validateSSN(hrObject.getSocialSecurity()));
 
@@ -238,17 +236,19 @@ public class Main {
             Predicate<FinanceDepartment> budgetForYear = finance -> finance.getBudget() <= budgetOfYear;
             boolean isBudgetHigher = budgetForYear.test(financeObject);
 
-            Client<String> listClientsNames = new Client<>();
-            listClientsNames.add("Ben");
-            listClientsNames.add("Abel");
-            listClientsNames.add("Adam");
-            listClientsNames.printList();
 
-            Client<Integer> listClientsID = new Client<>();
-            listClientsID.add(1442);
-            listClientsID.add(3131);
-            listClientsID.add(9530);
-            listClientsID.printList();
+            LicenseLinkedList<Client> clientList = new LicenseLinkedList<>();
+               Client client1 = new Client("John Jakes", "303-913-0554");
+               Client client2 = new Client("Ben Adam","303-456-7894");
+                clientList.add(client1);
+                clientList.add(client2);
+                clientList.stream().forEach(Client->{
+                    logger.info(Client.toString());
+                });
+
+
+
+        System.out.println();
 
 
             System.out.println();
@@ -259,8 +259,6 @@ public class Main {
             FileReader fileRer = new FileReader();
             fileRer.countUniqueWords("src/main/resources/uniqueWordCount.txt");
 
-
-            // LicenseLinkedList<Integer> licenseList = new LicenseLinkedList<>();
         }
 
     }
